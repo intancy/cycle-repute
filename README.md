@@ -1,64 +1,109 @@
-# ♻️ Cycle Repute
+# CYCLE REPUTE
+### Reputation Decay Engine – Grid Panel Edition
 
-A decentralized reputation-cycle engine built on Intercom.
+A dynamic reputation management engine featuring time-based decay,
+tier classification, and a structured grid dashboard interface.
 
-Forked from: Trac-Systems/intercom  
-Built by: @intancy  
+This fork introduces a redesigned grid-based CLI panel,
+progress-based scoring system, and history tracking mechanism.
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## 🧠 Overview
+## 🧠 Core Concept
 
-Cycle Repute introduces a trust cycle layer
-for peer-to-peer agent validation inside the Intercom ecosystem.
+Cycle Repute simulates a decentralized reputation engine where:
 
-Agents rate one another,
-build trust scores,
-and form a dynamic leaderboard of reliability.
+- Reputation increases or decreases via actions
+- Score decays automatically over time
+- Users are classified into trust tiers
+- Historical actions are logged
+- Grid-based UI displays structured panel data
 
----
-
-## ⚙️ Installation
-
-1. Clone repository
-   git clone https://github.com/intancy/cycle-repute.git
-2. Enter project folder
-   cd cycle-repute/cycle-agent
-3. Install dependencies
-   npm install
-4. Run the agent
-   node index.js
-
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ## ✨ Features
 
-- 1–5 Peer Rating
-- Average Reputation Engine
-- Dynamic Leaderboard
-- CLI-based Interaction
-- Lightweight Architecture
+- ⏳ Time-based reputation decay (2% hourly model)
+- 🏆 Tier classification (LOW → STANDARD → TRUSTED → ELITE)
+- 📊 Visual progress bar
+- 🗂 Action history tracking
+- 🔐 Crypto-based random user ID
+- 🧱 Grid Panel CLI layout
+- 🔄 Real-time score recalculation
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## 📸 Proof of Execution
+## 🖥 Grid Panel Preview
 
-### ♻️ Cycle Repute v2 Running
+![Grid Panel](proof/grid-panel.jpg)
 
-![Cycle Repute Execution](proof/Screenshot_20260219-115615_1.jpg)
+TRAC Address:
+trac1h3hevjqtc8lxj7z83k99w99ckm94ljmr3p3ylur5ggze4ctpw72sxpjalx
 
-The screenshot demonstrates:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-- Agent successfully initialized
-- Trust score submission (`rate`)
-- Reputation profile inspection (`inspect`)
-- Dynamic trust board ranking (`board`)
-- CLI engine running without errors
+## 🛠 Installation
 
----
+git clone https://github.com/intancy/cycle-repute.git  
+cd cycle-repute  
+node index.js  
 
-## 💰 Trac Address
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-   trac1h3hevjqtc8lxj7z83k99w99ckm94ljmr3p3ylur5ggze4ctpw72sxpjalx
+## ⚙️ Available Commands
 
----
+register  → Create new user  
+gain      → Increase reputation  
+lose      → Decrease reputation  
+history   → Show action history  
+list      → Refresh dashboard  
+exit      → Shutdown engine  
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🧮 Reputation Logic
+
+Decay Formula:
+
+newScore = currentScore - (currentScore × 0.02 × hoursElapsed)
+
+Tier Thresholds:
+
+0–199    → LOW  
+200–499  → STANDARD  
+500–999  → TRUSTED  
+1000+    → ELITE  
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🏗 Architecture
+
+- Node.js CLI Engine
+- In-memory state management
+- Dynamic rendering layer
+- Time-differential scoring model
+- Modular command routing
+- Grid-based UI renderer
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 🚀 Why This Fork Is Different
+
+This version introduces:
+
+- Full grid-based dashboard layout
+- Tier badge visualization
+- Score progress bar rendering
+- Time-based decay recalculation engine
+- Structured panel formatting
+- Extended command routing system
+- History persistence during runtime
+
+This is not a cosmetic fork — it upgrades logic,
+rendering structure, and system behavior.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+## 📜 License
+
+MIT License – Grid Panel Reputation Engine Edition

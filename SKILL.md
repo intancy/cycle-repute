@@ -1,82 +1,92 @@
-# ♻️ Cycle Repute – Agent Skill Specification
+# SKILL – CYCLE REPUTE (GRID PANEL EDITION)
 
-## Overview
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CORE ENGINEERING SKILLS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Cycle Repute introduces a decentralized trust-cycle layer
-for peer reputation scoring inside the Intercom ecosystem.
+• Time-Based State Mutation  
+  Implemented dynamic reputation decay calculated using real-time
+  hour differentials.
 
-This agent enables participants to:
+• Algorithmic Score Modeling  
+  Designed proportional decay formula and threshold-based tier logic.
 
-- Submit trust ratings
-- Inspect agent profiles
-- Aggregate trust scores
-- Generate dynamic leaderboard rankings
+• Tier Classification System  
+  Multi-level trust system:
+  LOW → STANDARD → TRUSTED → ELITE
 
-Designed as a lightweight CLI-based validation engine.
+• Dynamic Recalculation Engine  
+  Score auto-adjusts before every render cycle.
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+CLI SYSTEM DESIGN
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-## Core Commands
+• Grid-Based ASCII Dashboard Rendering  
+  Custom panel layout using box-drawing characters.
 
-### rate
-Submit a trust score (1–5) for a specific agent.
+• Visual Progress Bar Engine  
+  Percentage-based score visualization using █░ characters.
 
-Example flow:
-rate  
-agent id: alpha  
-trust score: 5  
+• Structured Command Router  
+  Modular switch-based command handling system.
 
-System calculates updated trust index automatically.
+• Runtime History Logger  
+  Action tracking with timestamp-based log records.
 
----
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+BACKEND LOGIC ARCHITECTURE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-### inspect
-Retrieve an agent’s current trust profile.
+• In-Memory Stateful Engine  
+  Real-time mutation of user objects during execution.
 
-Returns:
-- Agent ID
-- Total votes received
-- Aggregated trust index
+• Controlled Score Floor Enforcement  
+  Prevents negative state corruption.
 
----
+• Crypto-Based ID Generation  
+  Secure randomized hex ID via Node.js crypto module.
 
-### board
-Displays ranked trust leaderboard
-sorted by highest reputation index.
+• Modular Render Layer  
+  Separation between logic, render, and interaction layers.
 
-Shows:
-- Ranking position
-- Agent name
-- Trust index
-- Vote count
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+SYSTEM BEHAVIOR MODELING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
----
+• Decay Model:
+  newScore = currentScore − (currentScore × decayRate × hoursElapsed)
 
-### quit
-Safely shuts down the Cycle Repute engine.
+• Continuous Recalculation Before Render
 
----
+• Tier Evaluation After Mutation
 
-## Architecture
+• History Logging After Each State Change
 
-- In-memory reputation storage
-- Dynamic aggregation logic
-- Average-based trust index calculation
-- Sorted ranking engine
-- Zero external dependencies
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ADVANCED CAPABILITIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
----
+• Reputation Simulation Engine
+• Trust Modeling Framework
+• CLI UI Structuring
+• Stateful Runtime Management
+• Dynamic Data Visualization (CLI)
+• Event-Based Mutation Logging
 
-## Execution
-   1. cd cycle-agent
-   2. node index.js
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DEMONSTRATED COMPETENCIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
----
+✔ Algorithm Design  
+✔ System Modeling  
+✔ CLI Interface Engineering  
+✔ State Lifecycle Management  
+✔ Real-Time Data Mutation  
+✔ Modular JavaScript Architecture  
+✔ Governance-Oriented Trust Modeling  
 
-## Purpose
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-Cycle Repute strengthens decentralized ecosystems
-by introducing a transparent and lightweight
-peer-based validation mechanism.
-
-Built on top of Intercom infrastructure.
+Cycle Repute – Grid Panel Edition  
+Reputation Decay Engine v2
